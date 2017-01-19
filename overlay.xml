@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories version="1.0">
+<repo priority="50" status="unofficial">
+    <name>dev_overlay</name>
+    <description>My profile and packages</description>
+    <owner>
+	<email>alex.forth@gmail.com</email>
+	<name>Alex Khokhlov</name>
+    </owner>
+    <source type="git">https://github.com/DrAlexx/gentoo_overlay.git</source>
+    <feed>https://github.com/DrAlexx/gentoo_overlay/commits/master.atom</feed>
+</repo>
+</repositories>
+
