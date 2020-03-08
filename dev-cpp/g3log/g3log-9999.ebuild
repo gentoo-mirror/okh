@@ -16,12 +16,4 @@ IUSE="debug"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-#CMAKE_IN_SOURCE_BUILD="ON"
-#CMAKE_USE_DIR=${S}/g2log
-
-DOCS=( README.markdown )
-
-src_prepare() {
-        epatch "${FILESDIR}"/${PN}-9999-install.patch
-}
-
+DOCS=( README.markdown API.markdown )
