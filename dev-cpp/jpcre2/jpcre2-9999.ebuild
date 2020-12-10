@@ -1,5 +1,7 @@
+# Copyright 1999-2020 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 
 inherit git-r3 autotools
 
@@ -19,13 +21,14 @@ RDEPEND="${DEPEND}"
 DOCS=( README.md )
 
 src_prepare() {
-    # Rerun autotools
-    einfo "Regenerating autotools files..."
-    eaclocal
-    eautoconf
+# Rerun autotools
+einfo "Regenerating autotools files..."
+eaclocal
+eautoconf
+eapply_user
 }
 
 src_compile() {
-    econf --enable-cpp11
-    emake
+econf --enable-cpp11
+emake
 }
