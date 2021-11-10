@@ -7,7 +7,7 @@
 	<email>alex.forth(at)gmail.com</email>
 	<name>Olexiy Khokhlov</name>
     </owner>
-    <source type="git">https://github.com/OlexiyKhokhlov/gentoo_overlay.git</source>
-    <feed>https://github.com/OlexiyKhokhlov/gentoo_overlay/commits/master.atom</feed>
+    <source type="git">https://github.com/OlexiyKhokhlov/okh-overlay.git</source>
+    <feed>https://github.com/OlexiyKhokhlov/okh-overlay/commits/master.atom</feed>
 </repo>
 </repositories>
