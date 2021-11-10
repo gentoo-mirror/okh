@@ -67,8 +67,8 @@ CDEPEND="
 	clang? (
 		>=dev-cpp/yaml-cpp-0.6.2:=
 		|| (
+			sys-devel/clang:13
 			sys-devel/clang:12
-			sys-devel/clang:11
 		)
 		<sys-devel/clang-$((LLVM_MAX_SLOT + 1)):=
 	)

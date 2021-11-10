@@ -45,7 +45,8 @@ RDEPEND="${DEPEND}
 "
 
 PATCHES=(
-        "${FILESDIR}/${PN}-21.04.3-alsa.patch" # bug 441476
+	#bug 441476
+	"${FILESDIR}/${PN}-21.04.3-alsa.patch"
 )
 
 src_configure() {

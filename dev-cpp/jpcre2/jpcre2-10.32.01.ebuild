@@ -3,16 +3,16 @@
 
 EAPI=8
 
-inherit git-r3 autotools
+inherit autotools
 
 DESCRIPTION="C++ wrapper for PCRE2 library"
 HOMEPAGE="https://github.com/jpcre2/jpcre2"
 EGIT_REPO_URI="https://github.com/jpcre2/jpcre2.git"
-SRC_URI=""
+SRC_URI="https://github.com/jpcre2/jpcre2/archive/refs/tags/10.32.01.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="debug doc"
 
 DEPEND=">=dev-libs/libpcre2-10.21"
