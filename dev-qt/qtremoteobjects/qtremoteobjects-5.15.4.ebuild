@@ -13,8 +13,13 @@ fi
 IUSE=""
 
 DEPEND="
-	~dev-qt/qtcore-5.15.3
-	~dev-qt/qtnetwork-5.15.3
+	~dev-qt/qtcore-${PV}
+	~dev-qt/qtnetwork-${PV}
 "
+
+PATCHES=(
+    "${FILESDIR}/${PN}-signalindex-5.15.4.patch"
+)
+
 
 RDEPEND="${DEPEND}"
