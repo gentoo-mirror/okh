@@ -1,20 +1,20 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 ECM_HANDBOOK="forceoptional"
 ECM_TEST="false"
-KFMIN=5.80.0
-QTMIN=5.15.2
-inherit ecm kde.org
+KFMIN=5.92.0
+QTMIN=5.15.4
+inherit ecm gear.kde.org
 
 DESCRIPTION="Volume control gui based on KDE Frameworks"
 HOMEPAGE="https://apps.kde.org/kmix/"
 
 LICENSE="GPL-2" # TODO: CHECK
 SLOT="5"
-KEYWORDS="amd64 arm64 ~ppc64 x86"
+KEYWORDS="amd64 arm64 ~ppc64 ~riscv x86"
 IUSE="alsa plasma pulseaudio"
 
 DEPEND="
@@ -37,16 +37,15 @@ DEPEND="
 	plasma? ( >=kde-frameworks/plasma-${KFMIN}:5 )
 	pulseaudio? (
 		media-libs/libcanberra
-		>=media-sound/pulseaudio-0.9.12
+		media-libs/libpulse
 	)
 "
 RDEPEND="${DEPEND}
 	kde-plasma/kde-cli-tools:5
 "
-
 PATCHES=(
-	#bug 441476
-	"${FILESDIR}/${PN}-21.04.3-alsa.patch"
+        #bug 441476
+        "${FILESDIR}/${PN}-21.04.3-alsa.patch"
 )
 
 src_configure() {
@@ -58,4 +57,16 @@ src_configure() {
 	)
 
 	ecm_src_configure
+}
+
+pkg_postinst() {
+	if use pulseaudio && has_version kde-plasma/plasma-pa; then
+		elog "In KDE Plasma, kde-plasma/plasma-pa is the default audio volume handler."
+		elog "Should you prefer this to be kde-apps/kmix instead, do the following:"
+		elog " - In system tray, right click on [Show hidden items]"
+		elog " - Select [Configure System Tray]"
+		elog " - In [Entries],  search for [Audio Volume] and set it to [Disabled]"
+		elog "KMix will be shown as [Volume Control]."
+	fi
+	ecm_pkg_postinst
 }
