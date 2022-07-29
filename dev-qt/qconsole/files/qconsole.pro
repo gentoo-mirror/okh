@@ -16,7 +16,6 @@ QT -= gui
 
 INCLUDEPATH += $$PWD
 
-#TARGET = qconsole
 target.path = /usr/lib
 
 eheaders.path = "/usr/include/qconsole"
