@@ -1,6 +1,7 @@
 dev-cpp/g3log 1.3.4 9999: A modern and asynchronous C++ logging library
 dev-cpp/jpcre2 10.32.01 9999: C++ wrapper for PCRE2 library
 dev-qt/qconsole 1.3.1: A non-blocking Qt Style console class to easily handle stdin/out/err
+dev-qt/qctrlsignals 1.2.0: Qt based library to catch and handle windows and unix signals, in a cross platform manner.
 dev-qt/qt-creator 6.0.2: Lightweight IDE for C++/QML development centering around Qt
 dev-qt/qtremoteobjects 5.15.5: Qt Remote Objects is an IPC module.
 kde-apps/kmix 22.04.3-r1: Volume control gui based on KDE Frameworks
