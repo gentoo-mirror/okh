@@ -8,7 +8,7 @@ inherit cmake
 DESCRIPTION="A modern and asynchronous C++ logging library"
 HOMEPAGE="https://github.com/KjellKod/g3log"
 EGIT_REPO_URI="https://github.com/KjellKod/g3log.git"
-SRC_URI="https://github.com/KjellKod/g3log/archive/refs/tags/1.3.4.tar.gz"
+SRC_URI="https://github.com/KjellKod/g3log/archive/refs/tags/2.1.tar.gz"
 
 LICENSE="Unlicense"
 SLOT="0"
@@ -18,4 +18,4 @@ IUSE="debug"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-DOCS=( README.markdown API.markdown )
+DOCS=( docs )
