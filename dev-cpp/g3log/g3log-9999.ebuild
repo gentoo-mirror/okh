@@ -18,4 +18,6 @@ IUSE="debug"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
+CMAKE_BUILD_TYPE="Release"
+
 DOCS=( README.markdown API.markdown )
