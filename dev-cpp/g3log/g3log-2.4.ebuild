@@ -26,6 +26,6 @@ src_configure() {
     )
     cmake_src_configure
 }
-#CMAKE_BUILD_TYPE="Release"
+CMAKE_BUILD_TYPE="Release"
 
 DOCS=( docs )
