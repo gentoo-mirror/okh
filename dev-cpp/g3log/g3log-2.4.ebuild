@@ -18,6 +18,14 @@ IUSE="debug"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-CMAKE_BUILD_TYPE="Release"
+src_configure() {
+    local mycmakeargs=(
+	-DLANG=CXX
+        -DCMAKE_BUILD_TYPE=Release
+        -DADD_G3LOG_UNIT_TEST=OFF
+    )
+    cmake_src_configure
+}
+#CMAKE_BUILD_TYPE="Release"
 
 DOCS=( docs )
